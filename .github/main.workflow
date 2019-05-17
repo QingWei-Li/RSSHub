@@ -11,4 +11,8 @@ action "Rsync Deploy" {
     HOST_IP = "172.104.238.195"
     HOST_FINGERPRINT = "SHA256:S5INwoGbMK+2omoEyg0x78MpjGEqPly5TG22Ok16nZU"
   }
+  args = [
+    "$GITHUB_WORKSPACE",
+    "root@$HOST_IP:apps/rsshub"
+   ]
 }
