@@ -1,10 +1,16 @@
 workflow "Build and deploy on push" {
-  resolves = ["Rsync Deploy"]
   on = "push"
+  resolves = ["Rsync"]
 }
 
-action "Rsync Deploy" {
+action "Build" {
+  uses = "actions/npm@master"
+  args = "install"
+}
+
+action "Rsync" {
   uses = "maxheld83/rsync@v0.1.0"
+  needs = ["Build"]
   secrets = [
     "GITHUB_TOKEN",
     "SSH_PUBLIC_KEY",
