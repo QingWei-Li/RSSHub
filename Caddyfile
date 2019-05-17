@@ -1,0 +1,6 @@
+https://rsshub.cinwell.com {
+    tls {
+        dns cloudflare
+    }
+    proxy / localhost:1200
+}

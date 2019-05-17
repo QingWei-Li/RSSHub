@@ -1,0 +1,15 @@
+{
+    "apps": [
+        {
+            "name": "rsshub",
+            "script": "./cinwell.deploy.sh",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        },
+        {
+            "name": "rsshub-proxy",
+            "script": "caddy"
+        }
+    ]
+}
