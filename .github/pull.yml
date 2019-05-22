@@ -3,3 +3,6 @@ rules:
   - base: master
     upstream: DIYgod:master    # change `wei` to the owner of upstream repo
     mergeMethod: hardreset
+  - base: deploy
+    upstream: master  
+    mergeMethod: merge
