@@ -23,6 +23,6 @@ action "Rsync" {
   }
   args = [
     "$GITHUB_WORKSPACE",
-    "root@$HOST_IP:apps/rsshub",
+    "$HOST_NAME@$HOST_IP:apps/rsshub",
   ]
 }
