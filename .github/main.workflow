@@ -17,9 +17,9 @@ action "Rsync" {
     "SSH_PRIVATE_KEY",
   ]
   env = {
-    HOST_IP = "172.104.238.195"
     HOST_FINGERPRINT = "SHA256:S5INwoGbMK+2omoEyg0x78MpjGEqPly5TG22Ok16nZU"
-    HOST_NAME = "root"
+    HOST_IP = "111.231.255.252"
+    HOST_NAME = "bot"
   }
   args = [
     "$GITHUB_WORKSPACE",
