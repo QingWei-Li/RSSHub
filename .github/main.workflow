@@ -19,7 +19,7 @@ action "Rsync" {
   env = {
     HOST_FINGERPRINT = "SHA256:S5INwoGbMK+2omoEyg0x78MpjGEqPly5TG22Ok16nZU"
     HOST_IP = "111.231.255.252"
-    HOST_NAME = "bot"
+    HOST_NAME = "cinwell"
   }
   args = [
     "$GITHUB_WORKSPACE",
