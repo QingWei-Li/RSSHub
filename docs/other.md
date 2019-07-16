@@ -548,6 +548,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="LogicJake" example="/whalegogo/home" path="/whalegogo/home"/>
 
+## 巨潮资讯
+
+### 公司公告
+
+<Route author="LogicJake" example="/cninfo/stock_announcement/000410" path="/cninfo/stock_announcement/:code" :paramsDesc="['股票代码']"/>
+
 ## 决胜网
 
 ### 最新资讯
@@ -599,6 +605,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 马良行
 
 <Route author="junfengP" example="/mlhang" path="/mlhang" />
+
+## 镁客网 im2maker
+
+### 镁客网频道
+
+<Route author="jin12180000" example="/im2maker/" path="/ifanr/:channel?" :paramsDesc="['默认不填为 最新文章 ，频道如下']">
+
+| 最新文章 | 行业快讯 | 行业观察 | 镁客请讲 | 硬科技 100 人 | 投融界   | 万象       |
+| -------- | -------- | -------- | -------- | ------------- | -------- | ---------- |
+| 默认空   | fresh    | industry | talk     | intech        | investor | everything |
+
+</Route>
 
 ## 每日安全
 
