@@ -1257,17 +1257,17 @@
   dependencies:
     lodash.throttle "^4.1.1"
 
-"@vuepress/plugin-back-to-top@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.0.3.tgz#f10eb97a85781b044803ae96aceb5006cc6075b0"
-  integrity sha512-GTJKGnxep+2pMi22Uj4dm7kqxbifkRyGU7SrzWa7I26UpbuQ6M87EN6uCoH7CNTapv0O+kwrht7wci4BuPo5wg==
+"@vuepress/plugin-back-to-top@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.0.4.tgz#ded26ff8080a5ee5c84810e02fa91cb1d51a0532"
+  integrity sha512-MAU2uFVPMDQXLt8RZh2qxyDrPYEVOobPW/ea3G+3UhnfO9wi6zrfDhaVp6zTGXC/UEi3m0H1zWQkJdTvoG9N6A==
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-google-analytics@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.3.tgz#2c36584d473d6d21b0880719afc83bd5b40e778b"
-  integrity sha512-mqFFQSJjQp5zscZJ0Ik+YDLV7sZSAO8w13CG8c5WsUCjy+0oWhqAw/NjpVrEK8Y/PdYPe4l/OE5jMUU5AqRRjg==
+"@vuepress/plugin-google-analytics@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.4.tgz#1e50232c94149f99fb4cd1381dad49e8eab2f2d6"
+  integrity sha512-jd0NjUB9jqLKOax24B4AWW9/vZwGZo5FZMCugxK59EMIwk6zjblqQSS8W9dLcD1/HVWOZy2h1vrvxzTCNnNahA==
 
 "@vuepress/plugin-last-updated@^1.0.3":
   version "1.0.3"
@@ -1283,12 +1283,12 @@
   dependencies:
     nprogress "^0.2.0"
 
-"@vuepress/plugin-pwa@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-pwa/-/plugin-pwa-1.0.3.tgz#4cf668fcf49a5875bbee2307695277d5adea78d3"
-  integrity sha512-kPvjo74/XqEivTd2QtS0SWD386GHpyuBCg1Km1HdaajIez8gvpQYG6AiLGNFlvFBc+hwEB2GHQkxSR2QvnPVUQ==
+"@vuepress/plugin-pwa@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-pwa/-/plugin-pwa-1.0.4.tgz#c8e52841efad475336c67b913e18db418831cbbd"
+  integrity sha512-eKs6J694PI0QWAwQZ3HHhMU96zSEnCluvKqc8ujAkB/3GxOAT5aLtIIEWnJiTih8esmgVgzS88pIk8E9AZhk9A==
   dependencies:
-    "@vuepress/shared-utils" "^1.0.3"
+    "@vuepress/shared-utils" "^1.0.4"
     register-service-worker "^1.5.2"
     workbox-build "^4.3.1"
 
@@ -1304,10 +1304,10 @@
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.3.tgz#f8cd98380cc00db067fb243e4fd298c6b8b7179a"
   integrity sha512-CD4G6BrKtS6JS9DzPMbwwovanaKMhj/KN6Bv7P5oY5inWTl3lE9KOjzr1YUkoA6wL6f69EfdB5B7cdO2d47n/w==
 
-"@vuepress/shared-utils@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/shared-utils/-/shared-utils-1.0.3.tgz#224d2fc10fcf26d871eae8dd93b810616731123f"
-  integrity sha512-E9kh+nk+E0X6GTONXK1OWeY7Yyl/bUkWltmdh89f7hcSn2MxuBmlph4JdtZKrTK2m+9EqzpVR+CYanGjTA/ZQA==
+"@vuepress/shared-utils@^1.0.3", "@vuepress/shared-utils@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@vuepress/shared-utils/-/shared-utils-1.0.4.tgz#520c5a6ae263accd29efc8dfad727ad62052ded2"
+  integrity sha512-64Rlyb6HOhoeJDa6BbTGKVEgFqIJWdr6vO3o+wmAgKSvX7sqdT0Hs6ETjtt9jWSbjeQTjwP1XbXwKrpEY2jWKw==
   dependencies:
     chalk "^2.3.2"
     diacritics "^1.3.0"
