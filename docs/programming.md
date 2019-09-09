@@ -527,6 +527,12 @@ GitHub 官方也提供了一些 RSS:
 
 </Route>
 
+## 日报 | D2 资源库
+
+### 日报 | D2 资源库
+
+<Route author="Andiedie" example="/d2/daily" path="/d2/daily"/>
+
 ## 顺丰
 
 ### 顺丰丰桥开放平台公告
