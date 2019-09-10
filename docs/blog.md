@@ -54,6 +54,12 @@ pageClass: routes
 
 <Route author="LogicJake" example="/security/pulses" path="/security/pulses"/>
 
+## 美团技术团队
+
+### 最近更新
+
+<Route author="kt286" example="/meituan/tech/home" path="/meituan/tech/home"/>
+
 ## 王垠博客
 
 ### 文章
