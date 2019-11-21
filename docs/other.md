@@ -226,6 +226,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="junfengP" example="/metred/fuli" path="/metred/fuli" />
 
+## 好队友
+
+### 工作机会
+
+<Route author="lotosbin" example="/network360/jobs" path="/network360/jobs"/>
+
 ## 古诗文网
 
 ### 首页推荐
@@ -333,6 +339,10 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 科创板项目动态
 
 <Route author="Jeason0228" example="/sse/renewal" path="/sse/renewal"/>
+
+### 监管问询
+
+<Route author="Jeason0228" example="/sse/inquire" path="/sse/inquire"/>
 
 ## 深圳证券交易所
 
