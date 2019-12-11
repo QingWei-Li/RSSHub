@@ -49,7 +49,7 @@
     "mockdate": "2.0.5",
     "nock": "11.7.0",
     "nodejieba": "2.3.3",
-    "nodemon": "2.0.1",
+    "nodemon": "2.0.2",
     "pinyin": "2.9.0",
     "prettier": "1.19.1",
     "prettier-check": "2.0.0",
@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@postlight/mercury-parser": "2.2.0",
-    "@sentry/node": "5.10.1",
+    "@sentry/node": "5.10.2",
     "aes-js": "3.1.2",
     "art-template": "4.13.2",
     "cheerio": "1.0.0-rc.3",
