@@ -388,6 +388,12 @@ category 列表：
 
 </Route>
 
+## 华北水利水电大学
+
+### 学校通知
+
+<Route author="vuhe" example="/ncwu/notice" path="/universities/ncwu/notice" />
+
 ## 华南理工大学
 
 ### 教务处通知公告
@@ -1047,6 +1053,12 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 | 0        | 1        | 2        | 3        | 4        | 5        |
 
 </Route>
+
+## 浙江大学城市学院
+
+### 新闻通知
+
+<Route author="zhang-wangz" example="/zucc/news/latest" path="/zucc/news/latest"></Route>
 
 ## 浙江工商大学
 
