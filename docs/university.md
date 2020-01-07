@@ -54,6 +54,10 @@ pageClass: routes
 
 <Route author="AngUOI" example="/pku/rccp/mzyt" path="/universities/pku/rccp/mzyt" />
 
+### 生命科学学院近期讲座
+
+<Route author="TPOB" example="/pku/cls/lecture" path="/universities/pku/cls/lecture" />
+
 ## 北京航空航天大学
 
 ### 北京航空航天大学
@@ -392,7 +396,13 @@ category 列表：
 
 ### 学校通知
 
-<Route author="vuhe" example="/ncwu/notice" path="/universities/ncwu/notice" />
+<Route author="vuhe" example="/ncwu/notice" path="/universities/ncwu/:category" :paramsDesc="['分类']" >
+
+| 学校新闻 | 学校通知 | 学校文件 | 学术动态    |
+| -------- | -------- | -------- | ----------- |
+| news     | notice   | file     | scholarship |
+
+</Route>
 
 ## 华南理工大学
 
