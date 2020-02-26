@@ -14,6 +14,25 @@ pageClass: routes
 
 <Route author="liecn" example="/gradcafe/result/computer" path="/gradcafe/result/:type" :paramsDesc="['按关键词进行搜索，如 computer']"/>
 
+## X-MOL 平台
+
+### 新闻
+
+<Route author="cssxsh" example="/x-mol/news/3" path="/x-mol/news/:tag?" :paramsDesc="['数字编号，可从新闻列表URL得到。为空时从新闻主页获取新闻。']" />
+
+## 领研
+
+### 论文
+
+<Route author="yech1990" example="/linkresearcher/category=theses&subject=生物" path="/linkresearcher/theses/:param" :paramsDesc="['参数，如 subject=生物']"/>
+
+| `:param` | 举例            | 定义                                 |
+| -------- | --------------- | ------------------------------------ |
+| category | category=thesis | **必填**，theses/information/careers |
+| subject  | subject=生物    | 可置空                               |
+| columns  | columns=健康    | 可置空                               |
+| query    | query=病毒      | 可置空                               |
+
 ## 码农周刊
 
 ### issues

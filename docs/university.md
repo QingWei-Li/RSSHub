@@ -385,6 +385,16 @@ category 列表：
 
 </Route>
 
+### 研究生院
+
+<Route author="XYenon" example="/heu/yjsy/announcement" path="/heu/yjsy/:type?" :paramsDesc="['分类, 默认为 `announcement`']">
+
+| 通知公告     | 新闻动态 |
+| ------------ | -------- |
+| announcement | news     |
+
+</Route>
+
 ## 哈尔滨工业大学
 
 ### 哈尔滨工业大学教务处通知公告
@@ -1073,6 +1083,24 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 | 全部 | 信息发布 | 通知公告 | 教务信息 | 教学研究 | 教学实践 | 招生信息 | 质量监控 |
 | :--: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
 | all  |   xxfb   |   tzgg   |   jwxx   |   jxyj   |   jxsj   |   zsxx   |   zljk   |
+
+</Route>
+
+## 西安交通大学
+
+### 教务处
+
+<Route author="hoilc" example="/xjtu/dean/jxxx/xytz/ksap" path="/xjtu/dean/:subpath+" :paramsDesc="['栏目路径, 支持多级, 不包括末尾的`.htm`']">
+
+::: tip 提示
+
+支持`http://dean.xjtu.edu.cn/`下所有**有文章列表**的栏目,
+
+例如`http://dean.xjtu.edu.cn/gzlc.htm`, 则`subpath`为`gzlc`
+
+又例`http://dean.xjtu.edu.cn/jxxx/xytz.htm`, 则`subpath`为`jxxx/xytz`
+
+:::
 
 </Route>
 

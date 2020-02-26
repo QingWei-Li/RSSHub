@@ -20,6 +20,25 @@ pageClass: routes
 
 <RouteEn author="HenryQW" example="/gbcc/trust" path="/gbcc/trust" />
 
+## LinkResearch
+
+### theses
+
+<Route author="yech1990" example="/linkresearcher/category=theses&subject=生物" path="/linkresearcher/theses/:param" :paramsDesc="['key=value，eg. subject=生物']"/>
+
+| `:param` | example         | definition                             |
+| -------- | --------------- | -------------------------------------- |
+| category | category=thesis | **one of**，theses/information/careers |
+| subject  | subject=生物    | string / undefined                     |
+| columns  | columns=健康    | string / undefined                     |
+| columns  | columns=virus   | string / undefined                     |
+
+## X-MOL
+
+### News
+
+<RouteEn author="cssxsh" example="/x-mol/news/3" path="/x-mol/news/:tag?" :paramsDesc="['数字编号，可从新闻列表URL得到。为空时从新闻主页获取新闻。']" />
+
 ## ZhiShiFenZi
 
 ### News
@@ -42,9 +61,9 @@ pageClass: routes
 
 <RouteEn author="yech1990" example="/zhishifenzi/depth" path="/zhishifenzi/depth" />
 
-### 创新
+### innovation
 
-<Route author="yech1990" example="/zhishifenzi/innovation/company" path="/zhishifenzi/innovation/:type" :paramsDesc="['类别，如 company']"/>
+<Route author="yech1990" example="/zhishifenzi/innovation/company" path="/zhishifenzi/innovation/:type" :paramsDesc="['type，eg. company']"/>
 
 | `:type`       | type name     |
 | ------------- | ------------- |
