@@ -61,7 +61,7 @@
   "dependencies": {
     "@koa/router": "8.0.8",
     "@postlight/mercury-parser": "2.2.0",
-    "@sentry/node": "5.12.5",
+    "@sentry/node": "5.13.1",
     "aes-js": "3.1.2",
     "art-template": "4.13.2",
     "cheerio": "1.0.0-rc.3",
@@ -83,7 +83,7 @@
     "json5": "2.1.1",
     "koa": "2.11.0",
     "koa-basic-auth": "4.0.0",
-    "koa-favicon": "2.0.1",
+    "koa-favicon": "2.1.0",
     "koa-mount": "4.0.0",
     "lru-cache": "5.1.1",
     "lz-string": "1.4.4",
