@@ -497,7 +497,7 @@
         '.': [
             {
                 title: '电影和剧集',
-                description: 'https://docs.rsshub.app/multimedia.html#pian-yuan',
+                docs: 'https://docs.rsshub.app/multimedia.html#pian-yuan',
                 source: '/',
             },
         ],
@@ -589,7 +589,7 @@
         www: [
             {
                 title: '最新商品',
-                description: 'https://docs.rsshub.app/other.html#jiu-yun-wang',
+                docs: 'https://docs.rsshub.app/other.html#jiu-yun-wang',
                 source: ['/:category'],
                 target: '/wineyun/:category',
             },
@@ -1402,6 +1402,19 @@
                 docs: 'https://docs.rsshub.app/university.html#ha-er-bin-gong-cheng-da-xue',
                 source: '/*',
                 target: '/heu/gongxue/sx',
+            },
+        ],
+    },
+    'japanpost.jp': {
+        _name: '日本郵便',
+        'trackings.post': [
+            {
+                title: '郵便・荷物の追跡',
+                docs: 'https://docs.rsshub.app/other.html#ri-ben-you-bian',
+                source: '/services/srv/search/direct',
+                target: (params) => `/japanpost/${params.reqCode}/${params.locale}`,
+                script: "({reqCode: new URLSearchParams(location.search).get('reqCodeNo1').toUpperCase(), locale: new URLSearchParams(location.search).get('locale').toLowerCase()})",
+                verification: (params) => (params.reqCode.search(/^(?:\d{12}|[A-Z]{2}\d{9}[A-Z]{2})$/) === 0 && params.locale === 'ja') || params.locale === 'en',
             },
         ],
     },
