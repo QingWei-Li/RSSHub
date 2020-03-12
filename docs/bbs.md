@@ -40,6 +40,16 @@ pageClass: routes
 
 </Route>
 
+## LearnKu
+
+### 社区
+
+<Route author="haokaiyang" example="/learnku/laravel/qa" path="/learnku/:community/:category?" :paramsDesc="['社区 标识，可在 <https://learnku.com/communities> 找到', '分类，如果不传 `category` 则获取全部分类']"/>
+
+| 招聘 | 翻译         | 问答 | 链接  |
+| ---- | ------------ | ---- | ----- |
+| jobs | translations | qa   | links |
+
 ## MCBBS
 
 ### 版块
@@ -54,7 +64,7 @@ pageClass: routes
 
 ### 分区帖子
 
-<Route author="xyqfer" example="/nga/forum/489" path="/nga/forum/:fid/:recommend?"  :paramsDesc="['分区 id, 可在分区主页 URL 找到','是否只显示精华主题, 留空为否, 任意值为是']" radar="1"/>
+<Route author="xyqfer" example="/nga/forum/489" path="/nga/forum/:fid/:recommend?"  :paramsDesc="['分区 id, 可在分区主页 URL 找到, 没有 fid 时 stid 同样适用','是否只显示精华主题, 留空为否, 任意值为是']" radar="1"/>
 
 ### 帖子
 
