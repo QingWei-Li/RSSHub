@@ -12,7 +12,7 @@ pageClass: routes
 
 Supported sub-sites：
 | 9To5Mac | 9To5Google | 9To5Toys |
-| --- | ------ | ---- |
+| ------- | ---------- | -------- |
 | Mac | Google | Toys |
 
 </RouteEn>
@@ -89,6 +89,24 @@ Provides a better reading experience (full text articles) over the official one.
 
 <RouteEn author="loganrockmore" example="/letterboxd/user/followingdiary/demiadejuyigbe" path="/letterboxd/user/followingdiary/:username" :paramsDesc="['username']" />
 
+## Matters
+
+### Latest
+
+<Route author="xyqfer Cerebrater" example="/matters/latest" path="/matters/latest" radar="1"/>
+
+### Hot
+
+<Route author="Cerebrater" example="/matters/hot" path="/matters/hot" radar="1"/>
+
+### Tags
+
+<Route author="Cerebrater" example="/matters/tags/VGFnOjk3Mg" path="/matters/tags/:tid" :paramsDesc="['Tag id, can be found in the url of the tag page']" radar="1"/>
+
+### Author
+
+<Route author="Cerebrater" example="/matters/author/az" path="/matters/author/:uid" :paramsDesc="['Author id, can be found at author\'s homepage url']" radar="1"/>
+
 ## Nautilus
 
 ### Topics
@@ -138,11 +156,11 @@ Provides a better reading experience (full text articles) over the official one.
 
 ## Vulture
 
-<RouteEn author="loganrockmore" example="/vulture/movies" path="/vulture/:type" :paramsDesc="['The sub-site name']">
+<RouteEn author="loganrockmore" example="/vulture/movies" path="/vulture/:type/:excludetags?" :paramsDesc="['The sub-site name', 'Comma-delimited list of tags. If an article includes one of these tags, it will be excluded from the RSS feed.']">
 
 Supported sub-sites：
 | TV | Movies | Comedy | Music | TV Recaps | Books | Theater | Art | Awards | Video |
-| ----- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| --- | ------ | ------ | ----- | --------- | ----- | ------- | --- | ------ | ----- |
 | tv | movies | comedy | music | tvrecaps | books | theater | art | awards | video |
 
 </RouteEn>

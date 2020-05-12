@@ -30,14 +30,16 @@ sidebar: auto
 #### 获取源数据
 
 -   获取源数据的主要手段为使用 [got](https://github.com/sindresorhus/got) 发起 HTTP 请求（请求接口或请求网页）获取数据
+
 -   个别情况需要使用 [puppeteer](https://github.com/GoogleChrome/puppeteer) 模拟浏览器渲染目标页面并获取数据
 
 -   返回的数据一般为 JSON 或 HTML 格式
+
 -   对于 HTML 格式的数据，使用 [cheerio](https://github.com/cheeriojs/cheerio) 进行处理
 
 -   以下三种获取数据方法按 **「推荐优先级」** 排列：
 
-    1. **使用 got 从接口获取数据**
+    1.  **使用 got 从接口获取数据**
 
     样例：[/lib/routes/bilibili/coin.js](https://github.com/DIYgod/RSSHub/blob/master/lib/routes/bilibili/coin.js)。
 
@@ -101,7 +103,7 @@ sidebar: auto
     // 至此本路由结束
     ```
 
-    2. **使用 got 从 HTML 获取数据**
+    2.  **使用 got 从 HTML 获取数据**
 
     有时候数据是写在 HTML 里的，**没有接口供我们调用**，样例: [/lib/routes/douban/explore.js](https://github.com/DIYgod/RSSHub/blob/master/lib/routes/douban/explore.js)。
 
@@ -142,14 +144,8 @@ sidebar: auto
                     item = $(item);
                     itemPicUrl = `${item.find('a.cover').attr('style')}`.replace('background-image:url(', '').replace(')', '');
                     return {
-                        title: item
-                            .find('.title a')
-                            .first()
-                            .text(),
-                        description: `作者：${item
-                            .find('.usr-pic a')
-                            .last()
-                            .text()}<br>描述：${item.find('.content p').text()}<br><img src="${itemPicUrl}">`,
+                        title: item.find('.title a').first().text(),
+                        description: `作者：${item.find('.usr-pic a').last().text()}<br>描述：${item.find('.content p').text()}<br><img src="${itemPicUrl}">`,
                         link: item.find('.title a').attr('href'),
                     };
                 })
@@ -159,7 +155,7 @@ sidebar: auto
     // 至此本路由结束
     ```
 
-    3. **使用 puppeteer 渲染页面获取数据**
+    3.  **使用 puppeteer 渲染页面获取数据**
 
     ::: tip 提示
 
@@ -205,22 +201,11 @@ sidebar: auto
         item: list
             .map((i, item) => ({
                 // 文章标题
-                title: $(item)
-                    .find('.item-title a')
-                    .text()
-                    .trim(),
+                title: $(item).find('.item-title a').text().trim(),
                 // 文章链接
-                link: url.resolve(
-                    link,
-                    $(item)
-                        .find('.item-title a')
-                        .attr('href')
-                ),
+                link: url.resolve(link, $(item).find('.item-title a').attr('href')),
                 // 文章作者
-                author: $(item)
-                    .find('.item-author')
-                    .text()
-                    .trim(),
+                author: $(item).find('.item-author').text().trim(),
             }))
             .get(), // cheerio get() 方法将 cheerio node 对象数组转换为 node 对象数组
     };
@@ -230,16 +215,16 @@ sidebar: auto
     // 注：由于此路由只是起到一个新专栏上架提醒的作用，无法访问付费文章，因此没有文章正文
     ```
 
-    4. **使用通用配置型路由**
+    4.  **使用通用配置型路由**
 
     很大一部分网站是可以通过一个配置范式来生成 RSS 的。  
     通用配置即通过 cheerio（**CSS 选择器、jQuery 函数**）读取 json 数据来简便的生成 RSS。
 
     首先我们需要几个数据：
 
-    1. RSS 来源链接
-    2. 数据来源链接
-    3. RSS 标题（非 item 标题）
+    1.  RSS 来源链接
+    2.  数据来源链接
+    3.  RSS 标题（非 item 标题）
 
     ```js
     const buildData = require('@/utils/common-config');
@@ -299,7 +284,7 @@ const description = await ctx.cache.tryGet(link, async () => {
     const result = await got.get(link);
 
     const $ = cheerio.load(result.data);
-    $('img').each(function(i, e) {
+    $('img').each(function (i, e) {
         $(e).attr('src', $(e).attr('data-src'));
     });
 
@@ -358,7 +343,7 @@ ctx.state.data = {
 };
 ```
 
-##### BT/磁力源
+##### BT / 磁力源
 
 用于下载类 RSS，**额外**添加这些字段能使你的 RSS 被 BT 客户端识别并自动下载：
 
@@ -402,20 +387,20 @@ ctx.state.data = {
 
 ### 添加脚本文档
 
-1.  更新 [文档 (/docs/) ](https://github.com/DIYgod/RSSHub/blob/master/docs/) 目录内对应的文档, 可以执行 `npm run docs:dev` 查看文档效果
+1.  更新 [文档 (/docs/) ](https://github.com/DIYgod/RSSHub/blob/master/docs/) 目录内对应的文档，可以执行 `npm run docs:dev` 查看文档效果
 
     -   文档采用 vue 组件形式，格式如下：
         -   `author`: 路由作者，多位作者使用单个空格分隔
         -   `example`: 路由举例
         -   `path`: 路由路径
         -   `:paramsDesc`: 路由参数说明，数组，支持 markdown
-            1. 参数说明必须对应其在路径中出现的顺序
-            1. 如缺少说明将会导致`npm run docs:dev`报错
-            1. 说明中的 `'` `"` 必须通过反斜杠转义 `\'` `\"`
-            1. 不必在说明中标注`可选/必选`，组件会根据路由`?`自动判断
+            1.  参数说明必须对应其在路径中出现的顺序
+            2.  如缺少说明将会导致`npm run docs:dev`报错
+            3.  说明中的 `'` `"` 必须通过反斜杠转义 `\'` `\"`
+            4.  不必在说明中标注`可选 / 必选`，组件会根据路由`?`自动判断
     -   文档样例：
 
-        1. 无参数:
+        1.  无参数:
 
         ```vue
         <Route author="HenryQW" example="/sspai/series" path="/sspai/series" />
@@ -429,7 +414,7 @@ ctx.state.data = {
 
         ***
 
-        2. 多参数：
+        2.  多参数：
 
         ```vue
         <Route author="HenryQW" example="/github/issue/DIYgod/RSSHub" path="/github/issue/:user/:repo" :paramsDesc="['用户名', '仓库名']" />
@@ -472,7 +457,7 @@ ctx.state.data = {
 
 1.  请一定要注意把`<Route>`的标签关闭！
 
-1.  执行 `npm run format` 自动标准化代码格式，提交代码, 然后提交 pull request
+2.  执行 `npm run format` 自动标准化代码格式，提交代码，然后提交 pull request
 
 ## 提交新的 RSSHub Radar 规则
 
