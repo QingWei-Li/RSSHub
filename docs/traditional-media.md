@@ -174,6 +174,27 @@ Category 列表:
 
 </Route>
 
+## 端传媒
+
+### 端传媒
+
+<Route author="prnake" example="/initium/feature/zh-hans" path="/initium/:type?/:language?" :paramsDesc="['栏目，缺省为深度', '语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体']"/>
+
+::: warning 注意
+
+付费内容全文需要登陆获取，详情见部署页面的配置模块。
+
+:::
+
+Type 栏目:
+
+| 深度    | What’s New | 广场              | Pick-Up |
+| ------- | ---------- | ----------------- | ------- |
+| feature | news-brief | notes-and-letters | pick_up |
+
+通过提取文章全文，以提供比官方源更佳的阅读体验.
+
+</Route>
 ## 多维新闻网
 
 ### 要闻
@@ -368,6 +389,18 @@ category 对应的关键词有
 
 </Route>
 
+## 网易新闻专栏
+
+### 栏目
+
+<Route author="Solist-X" example="/netease/news/special/1" path="/netease/news/special/:type?" :paramsDesc="['栏目']">
+
+| 轻松一刻 | 槽值 | 人间 | 大国小民 | 三三有梗 | 数读 | 看客 | 下划线 | 谈心社 | 哒哒 | 胖编怪聊 | 曲一刀 | 今日之声 | 浪潮 | 沸点 |
+| -------- | ---- | ---- | -------- | -------- | ---- | ---- | ------ | ------ | ---- | -------- | ------ | -------- | ---- | ---- |
+| 1        | 2    | 3    | 4        | 5        | 6    | 7    | 8      | 9      | 10   | 11       | 12     | 13       | 14   | 15   |
+
+</Route>
+
 ## 卫报 The Guardian
 
 通过提取文章全文，以提供比官方源更佳的阅读体验。
@@ -390,23 +423,27 @@ category 对应的关键词有
 
 ### 热门
 
-<Route author="hoilc" example="/hk01/hot" path="/hk01/hot" />
+<Route author="hoilc" example="/hk01/hot" path="/hk01/hot" radar="1"/>
 
 ### 栏目
 
-<Route author="hoilc" example="/hk01/zone/11" path="/hk01/zone/:id" :paramsDesc="['栏目id, 可在URL中找到']"/>
+<Route author="hoilc" example="/hk01/zone/11" path="/hk01/zone/:id" :paramsDesc="['栏目id, 可在URL中找到']" radar="1"/>
 
 ### 子栏目
 
-<Route author="hoilc" example="/hk01/channel/391" path="/hk01/channel/:id" :paramsDesc="['子栏目id, 可在URL中找到']"/>
+<Route author="hoilc" example="/hk01/channel/391" path="/hk01/channel/:id" :paramsDesc="['子栏目id, 可在URL中找到']" radar="1"/>
 
 ### 专题
 
-<Route author="hoilc" example="/hk01/issue/649" path="/hk01/issue/:id" :paramsDesc="['专题id, 可在URL中找到']"/>
+<Route author="hoilc" example="/hk01/issue/649" path="/hk01/issue/:id" :paramsDesc="['专题id, 可在URL中找到']" radar="1"/>
 
 ### 标签
 
-<Route author="hoilc" example="/hk01/tag/2787" path="/hk01/tag/:id" :paramsDesc="['标签id, 可在URL中找到']"/>
+<Route author="hoilc" example="/hk01/tag/2787" path="/hk01/tag/:id" :paramsDesc="['标签id, 可在URL中找到']" radar="1"/>
+
+### 《香港 01》周报
+
+<Route author="MisteryMonster" example="/hk01/ebook" path="/hk01/ebook" radar="1"/>
 
 ## 香港電台
 
@@ -475,6 +512,10 @@ category 对应的关键词有
 ### 新闻联播文字版
 
 <Route author="luyuhuang" example="/xinwenlianbo/index" path="/xinwenlianbo/index" radar="1"/>
+
+### 新闻联播文字版全文
+
+<Route author="xfangbao" example="/xwlb" path="/xwlb/index" />
 
 ## 朝日新聞中文網（繁體中文版）
 

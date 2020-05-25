@@ -4,6 +4,11 @@ pageClass: routes
 
 # 新媒体
 
+## 199IT
+
+### 首页更新
+
+<Route author="xfangbao" example="/199it" path="/199it" />
 ## 36kr
 
 ### 资讯
@@ -64,6 +69,12 @@ pageClass: routes
 
 </Route>
 
+## Aljazeera 半岛网
+
+### 新闻
+
+<Route author="nczitzk" example="/aljazeera/news" path="/aljazeera/news"/>
+
 ## BOF
 
 ### 首页
@@ -104,11 +115,17 @@ pageClass: routes
 
 <Route author="JamesWDGu KeiLongW" example="/engadget/chinese" path="/engadget/:lang" :paramsDesc="['語言']">
 
-| 繁體中文 | 簡體中文 | US  | 日文     |
-| -------- | -------- | --- | -------- |
-| chinese  | cn       | us  | japanese |
+| 繁體中文 | 簡體中文 | US | 日文     |
+| -------- | -------- | -- | -------- |
+| chinese  | cn       | us | japanese |
 
 </Route>
+
+## Grub Street
+
+### Posts
+
+<Route author="loganrockmore" example="/grubstreet" path="/grubstreet" />
 
 ## iDownloadBlog
 
@@ -281,9 +298,9 @@ pageClass: routes
 
 Supported sub-sites:
 
-| TV  | Movies | Comedy | Music | TV Recaps | Books | Theater | Art | Awards | Video |
-| --- | ------ | ------ | ----- | --------- | ----- | ------- | --- | ------ | ----- |
-| tv  | movies | comedy | music | tvrecaps  | books | theater | art | awards | video |
+| TV | Movies | Comedy | Music | TV Recaps | Books | Theater | Art | Awards | Video |
+| -- | ------ | ------ | ----- | --------- | ----- | ------- | --- | ------ | ----- |
+| tv | movies | comedy | music | tvrecaps  | books | theater | art | awards | video |
 
 </Route>
 
@@ -664,6 +681,23 @@ Supported sub-sites:
 ### 最新新闻
 
 <Route author="kt286" example="/kkj/news" path="/kkj/news"/>
+
+## 快媒体
+
+### 首页更新
+
+<Route author="xfangbao" example="/kuai" path="/kuai" />
+
+### 具体栏目更新
+
+<Route author="xfangbao" example="/kuai/1" path="/kuai/:id" />
+
+具体栏目编号，去网站上看标签 
+
+| 网址                                                                                              | 对应路由 |
+| ------------------------------------------------------------------------------------------------- | -------- |
+| kuai.media                                                                                        | /kuai    |
+| [www.kuai.media/portal.php?mod=list&catid=38](http://www.kuai.media/portal.php?mod=list&catid=38) | /kuai/38 |
 
 ## 快知
 
