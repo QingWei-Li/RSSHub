@@ -235,6 +235,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="LogicJake" example="/kpmg/insights" path="/kpmg/insights" />
 
+## 东莞教研网
+
+### 信息公开
+
+<Route author="nczitzk" example="/dgjyw/news" path="/dgjyw/:type" :paramsDesc="['分类']">
+
+| 动态 | 公示         | 通知   |
+| ---- | ------------ | ------ |
+| news | announcement | notice |
+
+</Route>
+
 ## 福利资源 - met.red
 
 ### 福利资源 - met.red
@@ -251,11 +263,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 通知
 
-<Route author="Derekmini" example="/csc/notice/lxtz" path="/csc/notice/:type?" :paramsDesc="['分类, 默认为 `lxtz`']" radar="1">
+<Route author="Derekmini markmingjie" example="/csc/notice/lxtz" path="/csc/notice/:type?" :paramsDesc="['分类, 默认为 `lxtz`']" radar="1">
 
-| 遴选通知 | 综合项目专栏 | 常见问题解答 | 录取公告 |
-| -------- | ------------ | ------------ | -------- |
-| lxtz     | xmzl         | wtjd         | lqgg     |
+| 遴选通知 | 综合项目专栏 | 常见问题解答 | 录取公告 | 新闻资讯 | 新闻公告 |
+| -------- | ------------ | ------------ | -------- | -------- | -------- |
+| lxtz     | xmzl         | wtjd         | lqgg     | xwzx     | xwgg     |
 
 </Route>
 
@@ -338,6 +350,35 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="SettingDust"  example="/uraaka-joshi/_rrwq" path="/uraaka-joshi/:id" :paramsDesc="['用户名']"/>
 
+## 律师事务所文章
+
+### 君合
+
+<Route author="snipetsteve" example="/law/jh" path="/law/jh" />
+
+### 通商
+
+<Route author="snipetsteve" example="/law/ts" path="/law/ts" />
+
+### 海问
+
+<Route author="snipetsteve" example="/law/hw" path="/law/hw" />
+
+### 环球
+
+<Route author="snipetsteve" example="/law/hq" path="/law/hq" />
+
+### 国枫
+
+<Route author="snipetsteve" example="/law/gf" path="/law/gf" />
+
+### 中伦
+
+<Route author="snipetsteve" example="/law/zl" path="/law/zl" />
+
+### 锦天城
+
+<Route author="snipetsteve" example="/law/jtc" path="/law/jtc" />
 ## 马良行
 
 ### 产品更新
