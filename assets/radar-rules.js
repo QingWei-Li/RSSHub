@@ -908,6 +908,26 @@
 
     'ithome.com': {
         _name: 'IT 之家',
+        '.': [
+            {
+                title: '24 小时阅读榜',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: ['', '/*'],
+                target: '/ithome/ranking/24h',
+            },
+            {
+                title: '7 天最热',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: ['', '/*'],
+                target: '/ithome/ranking/7days',
+            },
+            {
+                title: '月榜',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: ['', '/*'],
+                target: '/ithome/ranking/monthly',
+            },
+        ],
         it: [
             {
                 title: 'IT 资讯',
@@ -1916,6 +1936,20 @@
                 target: '/umass/amherst/csnews',
             },
         ],
+        www: [
+            {
+                title: 'IPO Events',
+                docs: 'http://docs.rsshub.app/en/university.html#umass-amherst',
+                source: '/ipo/iss/events',
+                target: '/umass/amherst/ipoevents',
+            },
+            {
+                title: 'IPO Featured Stories',
+                docs: 'http://docs.rsshub.app/en/university.html#umass-amherst',
+                source: '/ipo/iss/featured-stories',
+                target: '/umass/amherst/ipostories',
+            },
+        ],
     },
     'lofter.com': {
         _name: 'Lofter',
@@ -2060,6 +2094,21 @@
             },
         ],
     },
+    'popiask.cn': {
+        _name: 'Popi 提问箱',
+        www: [
+            {
+                title: '提问箱新回答',
+                docs: 'https://docs.rsshub.app/social-media.html#popi-ti-wen-xiang',
+                source: '/:id',
+                target: (params) => {
+                    if (params.id) {
+                        return '/popiask/:id';
+                    }
+                },
+            },
+        ],
+    },
     'nppa.gov.cn': {
         _name: '国家新闻出版署',
         www: [
@@ -2074,6 +2123,59 @@
                 docs: 'https://docs.rsshub.app/government.html#guo-jia-xin-wen-chu-ban-shu',
                 source: '/nppa/contents/:channel/:content',
                 target: (params, url) => `/gov/nppa/${/nppa\/contents\/(\d+\/\d+)\.shtml/.exec(url)[1]}`,
+            },
+        ],
+    },
+    'acfun.cn': {
+        _name: 'AcFun',
+        www: [
+            {
+                tilte: '番剧',
+                docs: 'https://docs.rsshub.app/anime.html#acfun-fan-ju',
+                source: '/bangumi/:id',
+                target: (params) => `/acfun/bangumi/${params.id.replace('aa', '')}`,
+            },
+            {
+                title: '用户投稿',
+                docs: 'https://docs.rsshub.app/anime.html#acfun-yong-hu-tou-gao',
+                source: '/u/:id',
+                target: '/acfun/user/video/:id',
+            },
+        ],
+    },
+    'behance.net': {
+        _name: 'Behance',
+        www: [
+            {
+                title: 'User',
+                docs: 'https://docs.rsshub.app/design.html#behance-user-works',
+                source: ['/:user'],
+                target: (params, url, document) => {
+                    const uid1 = document && document.querySelector('html').innerHTML.match(/([^/]+)\/insights/)[1];
+                    return `/behance/${uid1}`;
+                },
+            },
+        ],
+    },
+    'picuki.com': {
+        _name: 'Picuki',
+        www: [
+            {
+                title: '用户',
+                docs: 'https://docs.rsshub.app/social-media.html#picuki-yong-hu',
+                source: '/profile/:id',
+                target: '/picuki/profile/:id',
+            },
+        ],
+    },
+    'manxiaosi.com': {
+        _name: '漫小肆',
+        '.': [
+            {
+                title: '漫画更新',
+                docs: 'https://docs.rsshub.app/anime.html#man-xiao-si',
+                source: '/book/:id',
+                target: '/manxiaosi/book/:id',
             },
         ],
     },
