@@ -10,6 +10,20 @@ pageClass: routes
 
 <Route author="xfangbao" example="/199it" path="/199it" />
 
+### 分类
+
+<Route author="nczitzk" example="/199it/category/199itdata" path="/199it/category/:caty" :paramsDesc="['分类, 可在分类页 URL 中找到']">
+
+分类为单一路径，如 `http://www.199it.com/archives/category/199itdata` 则路由为 `/199it/category/199itdata`.
+
+分类包含多重路径，如 `http://www.199it.com/archives/category/emerging/5g` 则替换 `/` 为 `|`，即路由为 `/199it/category/emerging|5g`.
+
+</Route>
+
+### 标签
+
+<Route author="nczitzk" example="/199it/tag/数据早报" path="/199it/tag/:tag" :paramsDesc="['标签, 可在标签页 URL 中找到']"/>
+
 ## 36kr
 
 ### 资讯
@@ -179,6 +193,20 @@ pageClass: routes
 ### 并购事件
 
 <Route author="xyqfer" example="/itjuzi/merge" path="/itjuzi/merge"/>
+
+## Kotaku
+
+### Story
+
+<Route author="CYTMWIA" example="/kotaku/story/news" path="/kotaku/story/:type" :paramsDesc="['Story类型']">
+
+可在 url 中找到，例如`https://kotaku.com/c/news`和`https://kotaku.com/c/kotaku-east`中的`news`和`kotaku-east`
+
+注意，无论是`news`还是`kotaku-east`之前都有`/c/`
+
+所以，如果您把`https://kotaku.com/latest`中的`latest`填入，该路由并不会正常工作
+
+</Route>
 
 ## Krankenkassen 德国新闻社卫健新闻
 
@@ -787,6 +815,12 @@ area 分区选项
 
 </Route>
 
+## 梅斯医学 MedSci
+
+### 推荐
+
+<Route author="nczitzk" example="/medsci/recommend" path="/medsci/recommend"/>
+
 ## 摩根大通研究所
 
 ### 新闻
@@ -942,6 +976,12 @@ area 分区选项
 ### 标签订阅
 
 <Route author="Jeason0228" example="/sspai/tag/apple" path="/sspai/tag/:keyword" :paramsDesc="['关键词']"/>
+
+## 生物谷
+
+### 最新资讯
+
+<Route author="nczitzk" example="/bioon/latest" path="/bioon/latest"/>
 
 ## 世界卫生组织 WHO
 

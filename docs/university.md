@@ -1409,6 +1409,12 @@ type 列表：
 
 <Route author="talenHuang" example="/sctu/jwc/13/645" path="/sctu/jwc/context/:type/:id" :paramsDesc="['通知类型','文章id']"/>
 
+## 四川职业技术学院
+
+### 学院公告
+
+<Route author="nczitzk" example="/scvtc/xygg" path="/scvtc/xygg" />
+
 ## 天津大学
 
 ### 天津大学教务处
@@ -1602,6 +1608,38 @@ type 列表：
 
 </Route>
 
+## 云南大学
+
+### 官网消息通告
+
+<Route author="hzcheney" example="/ynu/home" path="/ynu/home" >
+</Route>
+
+### 教务处主要通知
+
+<Route author="hzcheney" example="/ynu/jwc/1" path="/ynu/jwc/:category" :paramsDesc="['教务处通知分类']">
+
+| 教务科 | 学籍科 | 教学研究科 | 实践科学科 |
+| ------ | ------ | ---------- | ---------- |
+| 1      | 2      | 3          | 4          |
+
+</Route>
+
+### 研究生院重要通知（置顶消息）
+
+<Route author="hzcheney" example="/ynu/grs/zytz" path="/ynu/grs/zytz" >
+</Route>
+
+### 研究生院其他通知
+
+<Route author="hzcheney" example="/ynu/grs/qttz/2" path="/ynu/grs/qttz/:category" :paramsDesc="['研究生院通知分类']">
+
+| 招生工作 | 研究生培养 | 质量管理 | 学位工作 | 综合办公室 | 相关下载 |
+| -------- | ---------- | -------- | -------- | ---------- | -------- |
+| 1        | 2          | 3        | 4        | 5          | 6        |
+
+</Route>
+
 ## 浙江大学
 
 ### 普通栏目 如学术 / 图片 / 新闻等
@@ -1686,6 +1724,16 @@ type 列表：
 | 公告栏 | 每周会议 | 屏峰班车 | 新闻速递 | 学术动态 |
 | ------ | -------- | -------- | -------- | -------- |
 | 1      | 2        | 3        | 10       | 25       |
+
+</Route>
+
+### 设计与建筑学院
+
+<Route author="yikZero" example="/zjut/design/5" path="/zjut/design/:type" :paramsDesc="['板块id']">
+
+| 学术科研 | 学院新闻 | 公告通知 | 学术交流 |
+| -------- | -------- | -------- | -------- |
+| 5        | 16       | 18       | 20       |
 
 </Route>
 
@@ -1874,6 +1922,10 @@ type 列表：
 ### 新闻网讲座预告
 
 <Route author="nicolaszf" example="/cqu/news/jzyg" path="/cqu/news/jzyg"/>
+
+### 新闻网通知公告简报
+
+<Route author="Hagb" example="/cqu/news/tz" path="/cqu/news/tz"/>
 
 ### 校团委
 
