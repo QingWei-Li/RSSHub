@@ -4,11 +4,37 @@ pageClass: routes
 
 # Picture
 
-## Awesome Pigtails
+## 1X
 
-### New
+### Photos
 
-<RouteEn author="Chingyat" example="/pigtails" path="/pigtails/index"/>
+<RouteEn author="nczitzk" example="/1x/latest/all" path="/1x/:type?/:caty?" :paramsDesc="['sort type, `latest` by default, or `popular` or `curators-choice`', 'picture category, `all` by default, see below']">
+
+| Picture Category | Code          |
+| ---------------- | ------------- |
+| All categories   | all           |
+| Abstract         | abstract      |
+| Action           | action        |
+| Animals          | animals       |
+| Architecture     | architecture  |
+| Conceptual       | conceptual    |
+| Creative edit    | creative-edit |
+| Documentary      | documentary   |
+| Everyday         | everyday      |
+| Fine Art Nude    | fine-art-nude |
+| Humour           | humour        |
+| Landscape        | landscape     |
+| Macro            | macro         |
+| Mood             | mood          |
+| Night            | night         |
+| Performance      | performance   |
+| Portrait         | portrait      |
+| Still life       | still-life    |
+| Street           | street        |
+| Underwater       | underwater    |
+| Wildlife         | wildlife      |
+
+</RouteEn>
 
 ## Bing Wallpaper
 
@@ -60,6 +86,16 @@ For example:
 ### Manga Updates
 
 <RouteEn author="hoilc" example="/loveheaven/update/kimetsu-no-yaiba" path="/loveheaven/update/:slug" :paramsDesc="['Manga slug, can be found in URL, including neither `manga-` nor `.html`']" />
+
+## NASA Astronomy Picture of the Day
+
+### NASA
+
+<RouteEn author="nczitzk" example="/nasa/apod" path="/nasa/apod" />
+
+### Cheng Kung University Mirror
+
+<RouteEn author="nczitzk" example="/nasa/apod-ncku" path="/nasa/apod-ncku" />
 
 ## nHentai
 

@@ -75,7 +75,7 @@ These feed do not include boosts (a.k.a. reblogs). RSSHub provides a feed for us
 
 ### User Profile
 
-<Route author="hoilc" example="/picuki/profile/stefaniejoosten" path="/picuki/profile/:id" :paramsDesc="['Instagram id']" />
+<Route author="hoilc" example="/picuki/profile/stefaniejoosten" path="/picuki/profile/:id/:displayVideo?" :paramsDesc="['Instagram id','Default to disable the embedded video, set to any value to enable embedding']" />
 
 ## pixiv
 
@@ -114,6 +114,18 @@ Only for self-hosted
 
 :::
 </RouteEn>
+
+## pixiv-fanbox
+
+<RouteEn author="sgqy" example="/fanbox/otomeoto" path="/fanbox/:user?" :paramsDesc="['User name. Can be found in URL. Default is official news']"/>
+::: warning Paywall
+
+The site **fanbox** is made for paid users. To get paid content, you should host by yourself.
+
+Settings: environment argument `FANBOX_SESSION_ID` equals to `FANBOXSESSID` in site cookies.
+
+:::
+
 
 ## Telegram
 

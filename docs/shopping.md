@@ -10,6 +10,32 @@ pageClass: routes
 
 <Route author="luyuhuang" example="/alter-cn/news" path="/alter-cn/news"/>
 
+## AppSales
+
+### Apps
+
+<Route author="nczitzk" example="/appsales/highlights" path="/appsales/:caty?/:time?" :paramsDesc="['分类，默认为 `highlights`', '时间，默认为 `24h`']">
+
+分类
+
+| Highlights | Active Sales | Now Free | Watchlist Charts |
+| ---------- | ------------ | -------- | ---------------- |
+| highlights | activesales  | nowfree  | mostwanted       |
+
+时间
+
+| 最近一天 | 最近一周 | 所有时间 |
+| -------- | -------- | -------- |
+| 24h      | week     | alltime  |
+
+::: tip 提示
+
+参数 `time` 仅在选择 `mostwanted` 作为分类的时候有效。
+
+:::
+
+</Route>
+
 ## Furstar
 
 ### 最新售卖角色列表
@@ -23,6 +49,12 @@ pageClass: routes
 ### 画师列表
 
 <Route author="NeverBehave" example="/furstar/artists/cn" path="/furstar/artists/:lang?" :paramsDesc="['语言, 留空为jp, 支持cn, en']"/>
+
+## Guiltfree.pl
+
+### Onsale
+
+<Route author="nczitzk" example="/guiltfree/onsale" path="/guiltfree/onsale"/>
 
 ## LeBonCoin
 
@@ -203,6 +235,12 @@ For instance, in <https://www.leboncoin.fr/recherche/?**category=10&locations=Pa
 
 <Route author="nczitzk" example="/smzdm/baoliao/7367111021" path="/smzdm/baoliao/:uid" :paramsDesc="['用户id，网址上直接可以看到']"/>
 
+## 它惠网
+
+### 线报
+
+<Route author="nczitzk" example="/tahui/rptlist" path="/tahui/rptlist"/>
+
 ## 淘宝众筹
 
 ### 众筹项目
@@ -226,6 +264,12 @@ For instance, in <https://www.leboncoin.fr/recherche/?**category=10&locations=Pa
 ### 商品上新
 
 <Route author="LogicJake" example="/weidian/goods/431508863" path="/weidian/goods/:id" :paramsDesc="['商铺 id']"/>
+
+## 消费明鉴
+
+### 最新新闻
+
+<Route author="nczitzk" example="/mingjian" path="/mingjian"/>
 
 ## 消费者报道
 

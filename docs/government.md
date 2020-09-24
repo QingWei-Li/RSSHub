@@ -71,6 +71,18 @@ pageClass: routes
 
 <Route author="HenryQW" example="/un/scveto" path="/un/scveto"/>
 
+## 泉州市跨境电子商务协会
+
+### 新闻动态
+
+<Route author="nczitzk" example="/qzcea" path="/qzcea/:caty?" :paramsDesc="['分类 id，默认为 1']">
+
+| 新闻动态 | 协会动态 | 通知公告 | 会员风采 | 政策法规 | 电商资讯 |
+| -------- | -------- | -------- | -------- | -------- | -------- |
+| 1        | 2        | 3        | 5        | 14       | 18       |
+
+</Route>
+
 ## 日本国外務省
 
 ### 記者会見
@@ -152,6 +164,18 @@ pageClass: routes
 | 商品价格 | 农产品价格  | 油价   |
 | -------- | ----------- | ------ |
 | shangpin | nongchanpin | youjia |
+
+</Route>
+
+### 图解
+
+<Route author="nczitzk" example="/gov/xinwen/tujie/zhengce" path="/gov/xinwen/tujie/:caty" :paramsDesc="['图解分类，见下表']">
+
+| 总理活动图解 | 每周一画 | 其他漫画 | 图解政策 | 其他图解 |
+| ------------ | -------- | -------- | -------- | -------- |
+| zlhd         | mzyh     | qtmh     | zhengce  | qttj     |
+
+全部分类参见 [图解图表](http://www.gov.cn/xinwen/tujie/index.htm)
 
 </Route>
 
