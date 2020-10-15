@@ -1,6 +1,6 @@
----
-pageClass: routes
----
+***
+
+## pageClass: routes
 
 # 政务消息
 
@@ -59,11 +59,11 @@ pageClass: routes
 
 ### 列表
 
-<Route author="y2361547758" example="/gov/nppa/317" path="/gov/nppa/:channel" :paramsDesc="['栏目名id']" radar="1" />
+<Route author="y2361547758" example="/gov/nppa/317" path="/gov/nppa/:channel" :paramsDesc="['栏目名id']" radar="1" rssbud="1"/>
 
 ### 详情
 
-<Route author="y2361547758" example="/gov/nppa/318/45948" path="/gov/nppa/:channel/:content" :paramsDesc="['栏目名id', '文章id']" radar="1" />
+<Route author="y2361547758" example="/gov/nppa/318/45948" path="/gov/nppa/:channel/:content" :paramsDesc="['栏目名id', '文章id']" radar="1" rssbud="1"/>
 
 ## 联合国
 
@@ -88,6 +88,12 @@ pageClass: routes
 ### 記者会見
 
 <Route author="sgqy" example="/go.jp/mofa" path="/go.jp/mofa"/>
+
+## 世界贸易组织
+
+### 争端解决新闻
+
+<Route author="nczitzk" example="/wto/dispute-settlement" path="/wto/dispute-settlement/:year?" :paramsDesc="['年份，默认为当前年份']"/>
 
 ## 苏州市人民政府
 
@@ -132,6 +138,16 @@ pageClass: routes
 ### 最新通知
 
 <Route author="Yoge-Code" example="/gov/cnca/zxtz" path="/gov/cnca/zxtz"/>
+
+## 中国人大网
+
+<Route author="233yeee" example="/npc/c183" path="/npc/:caty" :paramsDesc="['分类名，支持形如`http://www.npc.gov.cn/npc/*/list.shtml`的网站，传入 npc 之后的参数']">
+
+| 立法 | 监督 | 代表 | 理论 | 权威发布 | 滚动新闻 |
+| ---- | ---- | ---- | ---- | -------- | -------- |
+| c183 | c184 | c185 | c189 | c12435   | c10134   |
+
+</Route>
 
 ## 中国信息通信研究院
 
@@ -325,21 +341,21 @@ pageClass: routes
 
 #### 德国 `DE`
 
--   大使馆: `/embassy/de`
+*   大使馆: `/embassy/de`
 
--   领事馆城市列表:
+*   领事馆城市列表:
 
 | 城市   | 路由                 |
 | ------ | -------------------- |
 | 慕尼黑 | `/embassy/de/munich` |
 
-* * *
+***
 
 #### 法国 `FR`
 
--   大使馆: `/embassy/fr`
+*   大使馆: `/embassy/fr`
 
--   领事馆城市列表:
+*   领事馆城市列表:
 
 | 城市       | 路由                     |
 | ---------- | ------------------------ |
@@ -347,13 +363,13 @@ pageClass: routes
 | 斯特拉斯堡 | `/embassy/fr/strasbourg` |
 | 里昂       | `/embassy/fr/lyon`       |
 
-* * *
+***
 
 #### 日本 `JP`
 
--   大使馆: `/embassy/jp`
+*   大使馆: `/embassy/jp`
 
--   领事馆城市列表:
+*   领事馆城市列表:
 
 | 城市   | 路由                   |
 | ------ | ---------------------- |
@@ -364,13 +380,13 @@ pageClass: routes
 | 札幌   | `/embassy/jp/sapporo`  |
 | 新潟   | `/embassy/jp/niigata`  |
 
-* * *
+***
 
 #### 韩国 `KR`
 
--   大使馆: `/embassy/kr`
+*   大使馆: `/embassy/kr`
 
--   领事馆城市列表:
+*   领事馆城市列表:
 
 | 城市 | 路由                  |
 | ---- | --------------------- |
@@ -378,19 +394,25 @@ pageClass: routes
 | 济州 | `/embassy/kr/jeju`    |
 | 光州 | `/embassy/kr/gwangju` |
 
-* * *
+***
+
+#### 马来西亚 `MY`
+
+*   大使馆: `/embassy/my`
+
+***
 
 #### 新加坡 `SG`
 
--   大使馆: `/embassy/sg`
+*   大使馆: `/embassy/sg`
 
-* * *
+***
 
 #### 美国 `US`
 
--   大使馆: `/embassy/us`
+*   大使馆: `/embassy/us`
 
--   领事馆城市列表:
+*   领事馆城市列表:
 
 | 城市   | 路由                       |
 | ------ | -------------------------- |
@@ -398,19 +420,25 @@ pageClass: routes
 | 芝加哥 | `/embassy/us/chicago`      |
 | 旧金山 | `/embassy/us/sanfrancisco` |
 
-* * *
+***
 
 #### 英国 `UK`
 
--   大使馆: `/embassy/uk`
+*   大使馆: `/embassy/uk`
 
--   领事馆城市列表:
+*   领事馆城市列表:
 
 | 城市       | 路由                     |
 | ---------- | ------------------------ |
 | 爱丁堡     | `/embassy/uk/edinburgh`  |
 | 贝尔法斯特 | `/embassy/uk/belfast`    |
 | 曼彻斯特   | `/embassy/uk/manchester` |
+
+## 中華民國國防部
+
+### 即時軍事動態
+
+<Route author="nczitzk" example="/gov/taiwan/mnd" path="/gov/taiwan/mnd"/>
 
 ## 中华人民共和国海关总署
 
@@ -438,10 +466,10 @@ pageClass: routes
 
 更多例子:
 
--   `农业农村部动态`的网页链接是`http://www.moa.gov.cn/xw/zwdt/`, 对应的`suburl`是`xw/zwdt`
--   `财务公开`的网页链接是`http://www.moa.gov.cn/gk/cwgk_1/`, 对应的`suburl`是`gk/cwgk_1`
--   像[政策法规](http://www.moa.gov.cn/gk/zcfg/)这种页面 (`http://www.moa.gov.cn/gk/zcfg/`), 它**不是**一个合法的分类目录，它是`法律`, `行政法规`, `部门规章`等一堆栏目的集合，这时候请点开对应栏目的`更多 >>`进入栏目的目录，再根据上面的规则提取`suburl`
--   特别地，`图片新闻`对应的`suburl`为`xw/tpxw/`, `最新公开`对应的`suburl`为`govpublic`
+*   `农业农村部动态`的网页链接是`http://www.moa.gov.cn/xw/zwdt/`, 对应的`suburl`是`xw/zwdt`
+*   `财务公开`的网页链接是`http://www.moa.gov.cn/gk/cwgk_1/`, 对应的`suburl`是`gk/cwgk_1`
+*   像[政策法规](http://www.moa.gov.cn/gk/zcfg/)这种页面 (`http://www.moa.gov.cn/gk/zcfg/`), 它**不是**一个合法的分类目录，它是`法律`, `行政法规`, `部门规章`等一堆栏目的集合，这时候请点开对应栏目的`更多 >>`进入栏目的目录，再根据上面的规则提取`suburl`
+*   特别地，`图片新闻`对应的`suburl`为`xw/tpxw/`, `最新公开`对应的`suburl`为`govpublic`
 
 </Route>
 

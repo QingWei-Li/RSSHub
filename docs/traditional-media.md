@@ -1,8 +1,4 @@
----
-pageClass: routes
----
-
-# 传统媒体
+***
 
 ## 21 财经
 
@@ -10,11 +6,25 @@ pageClass: routes
 
 <Route author="brilon" example="/21caijing/channel/readnumber" path="/21caijing/channel/:name" :paramsDesc="['频道名称，可在[https://m.21jingji.com/](https://m.21jingji.com/)页面URL中找到']"/>
 
+## ABC News
+
+### 子站
+
+<Route author="nczitzk" example="/abc/chinese" path="/abc/:site?" :paramsDesc="['子站，见下表']">
+
+子站
+
+| Just In | Politics | World | Business | Analysis             | Sport | Science | Health | Arts         | Fact Check | 中文新闻 | Berita Bahasa Indonesia | Tok Pisin |
+| ------- | -------- | ----- | -------- | -------------------- | ----- | ------- | ------ | ------------ | ---------- | -------- | ----------------------- | --------- |
+| justin  | politics | world | business | analysis-and-opinion | sport | science | health | arts-culture | factcheck  | chinese  | indonesian              | tok-pisin |
+
+</Route>
+
 ## AP News
 
 ### 话题
 
-<Route author="zoenglinghou" example="/apnews/topics/apf-topnews" path="/apnews/topics/:topic" :paramsDesc="['话题名称，可在 URL 中找到，例如 AP Top News [https://apnews.com/apf-topnews](https://apnews.com/apf-topnews) 的话题为 `apf-topnews`']" radar="1"/>
+<Route author="zoenglinghou" example="/apnews/topics/apf-topnews" path="/apnews/topics/:topic" :paramsDesc="['话题名称，可在 URL 中找到，例如 AP Top News [https://apnews.com/apf-topnews](https://apnews.com/apf-topnews) 的话题为 `apf-topnews`']" radar="1" rssbud="1"/>
 
 ## BBC
 
@@ -26,8 +36,8 @@ pageClass: routes
 
 支持大部分频道，频道名称见[BBC 官方 RSS](https://www.bbc.co.uk/news/10628494)。
 
--   频道为单一路径，如 `https://feeds.bbci.co.uk/news/business/rss.xml` 则为 `/bbc/business`.
--   频道包含多重路径，如 `https://feeds.bbci.co.uk/news/world/asia/rss.xml` 则替换 `/` 为 `-` `/bbc/world-asia`.
+*   频道为单一路径，如 `https://feeds.bbci.co.uk/news/business/rss.xml` 则为 `/bbc/business`.
+*   频道包含多重路径，如 `https://feeds.bbci.co.uk/news/world/asia/rss.xml` 则替换 `/` 为 `-` `/bbc/world-asia`.
 
 </Route>
 
@@ -37,15 +47,15 @@ pageClass: routes
 
 通过提取文章全文，以提供比官方源更佳的阅读体验.
 
-支持大部分频道，频道名称见[BBC 中文网官方 RSS](https://www.bbc.com/zhongwen/simp/services/2009/09/000000_rss)。
+支持大部分频道，频道名称见[BBC 中文网官方 RSS](https://www.bbc.com/zhongwen/simp/services/2009/09/000000\_rss)。
 
 简体版：
 
--   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/simp/business/index.xml` 则为 `/bbc/chinese/business`.
+*   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/simp/business/index.xml` 则为 `/bbc/chinese/business`.
 
 繁体版：
 
--   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/trad/business/index.xml` 则为 `/bbc/traditionalchinese/business`.
+*   频道，如金融财经 `http://www.bbc.co.uk/zhongwen/trad/business/index.xml` 则为 `/bbc/traditionalchinese/business`.
 
 </Route>
 
@@ -91,8 +101,8 @@ pageClass: routes
 
 ::: tip 提示
 
--   不支持付费文章.
--   由于未知原因 FT 中文网的 SSL 证书不被信任 (参见[SSL Labs 报告](https://www.ssllabs.com/ssltest/analyze.html?d=www.ftchinese.com&latest)), 所有文章通过 http 协议获取.
+*   不支持付费文章.
+*   由于未知原因 FT 中文网的 SSL 证书不被信任 (参见[SSL Labs 报告](https://www.ssllabs.com/ssltest/analyze.html?d=www.ftchinese.com\&latest)), 所有文章通过 http 协议获取.
 
 :::
 
@@ -100,8 +110,8 @@ pageClass: routes
 
 支持所有频道，频道名称见[官方频道 RSS](http://www.ftchinese.com/channel/rss.html).
 
--   频道为单一路径，如 `http://www.ftchinese.com/rss/news` 则为 `/ft/chinese/news`.
--   频道包含多重路径，如 `http://www.ftchinese.com/rss/column/007000002` 则替换 `/` 为 `-` `/ft/chinese/column-007000002`.
+*   频道为单一路径，如 `http://www.ftchinese.com/rss/news` 则为 `/ft/chinese/news`.
+*   频道包含多重路径，如 `http://www.ftchinese.com/rss/column/007000002` 则替换 `/` 为 `-` `/ft/chinese/column-007000002`.
 
 </Route>
 
@@ -110,6 +120,10 @@ pageClass: routes
 ### News Web Easy
 
 <Route author="Andiedie" example="/nhk/news_web_easy" path="/nhk/news_web_easy"/>
+
+## pageClass: routes
+
+# 传统媒体
 
 ## Solidot
 
@@ -121,7 +135,7 @@ pageClass: routes
 
 Solidot 提供的 feed:
 
--   <https://www.solidot.org/index.rss>
+*   <https://www.solidot.org/index.rss>
 
 :::
 
@@ -239,26 +253,61 @@ Category 列表:
 
 <Route author="saury" example="/eastday/sh" path="/eastday/sh" />
 
+## 読売新聞
+
+### 新聞
+
+<Route author="Arracc" example="/yomiuri/news" path="/yomiuri/:category" :paramsDesc="['板块']">
+
+无料全文，综合页文章标题添加板块标签。
+
+| 総合 | 社会     | 政治     | 経済    | スポーツ | 国際  | 科学・ＩＴ | 選挙・世論調査 | エンタメ・文化 | 囲碁・将棋 | ライフ | 地域  | 社説      |
+| ---- | -------- | -------- | ------- | -------- | ----- | ---------- | -------------- | -------------- | ---------- | ------ | ----- | --------- |
+| news | national | politics | economy | sports   | world | science    | election       | culture        | igoshougi  | life   | local | editorial |
+
+</Route>
+
 ## 端传媒
 
-### 端传媒
-
-<Route author="prnake" example="/initium/feature/zh-hans" path="/initium/:type?/:language?" :paramsDesc="['栏目，缺省为深度', '语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体']"/>
+通过提取文章全文，以提供比官方源更佳的阅读体验。
 
 ::: warning 注意
 
-付费内容全文需要登陆获取，详情见部署页面的配置模块。
+付费内容全文可能需要登陆获取，详情见部署页面的配置模块。
 
 :::
 
+### 专题・栏目
+
+<Route author="prnake" example="/initium/latest/zh-hans" path="/initium/:type?/:language?" :paramsDesc="['栏目，缺省为最新', '语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体']"/>
+
 Type 栏目:
 
-| 深度    | What’s New | 广场              | Pick-Up |
-| ------- | ---------- | ----------------- | ------- |
-| feature | news-brief | notes-and-letters | pick_up |
+| 最新   | 深度    | What’s New | 广场              | 科技       | 风物    | 特约    | ... |
+| ------ | ------- | ---------- | ----------------- | ---------- | ------- | ------- | --- |
+| latest | feature | news-brief | notes-and-letters | technology | culture | pick_up | ... |
 
-通过提取文章全文，以提供比官方源更佳的阅读体验.
+更多栏目名称可通过 <https://theinitium.com/section/special/> 及 <https://theinitium.com/section/hot_channel/> 获取。
 
+</Route>
+
+### 话题・标签
+
+<Route author="AgFlore" example="/theinitium/tags/2019_10/zh-hans" path="/theinitium/tags/:type/:language?" :paramsDesc="['话题ID，可从话题页URL中获取，如<https://theinitium.com/tags/2019_10/>', '语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体']"/>
+
+### 作者
+
+<Route author="AgFlore" example="/theinitium/author/ninghuilulu/zh-hans" path="theinitium/author/:type/:language?" :paramsDesc="['作者ID，可从作者主页URL中获取，如<https://theinitium.com/author/ninghuilulu/>','语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体']"/>
+
+### 个人订阅追踪动态
+
+<Route author="AgFlore" example="/theinitium/follow/articles/zh-hans" path="theinitium/follow/articles/:language?" :paramsDesc="['语言，简体`zh-hans`，繁体`zh-hant`，缺省为简体']">
+
+::: warning 注意
+
+需要自建，详情见部署页面的配置模块。
+
+:::
 </Route>
 
 ## 多维新闻网
@@ -282,6 +331,16 @@ Type 栏目:
 ### 华尔街见闻
 
 <Route author="conanjunn" example="/wallstreetcn/news/global" path="/wallstreetcn/news/global" />
+
+### 实时快讯
+
+<Route author="nczitzk" example="/wallstreetcn/live" path="/wallstreetcn/live/:channel?" :paramsDesc="['快讯分类，默认`global`，见下表']">
+
+| 要闻   | A 股    | 美股     | 港股     | 外汇  | 商品      | 理财      |
+| ------ | ------- | -------- | -------- | ----- | --------- | --------- |
+| global | a-stock | us-stock | hk-stock | forex | commodity | financing |
+
+</Route>
 
 ## 极客公园
 
@@ -363,37 +422,37 @@ category 对应的关键词有
 
 支持语言列表
 
--   中国分站 `cn`：
+*   中国分站 `cn`：
 
-    -   主频道:
+    *   主频道:
 
     | 深度分析 | 时事要闻    | 生活 | 投资      |
     | -------- | ----------- | ---- | --------- |
     | analyses | generalnews | life | investing |
 
-    -   资讯子频道:
+    *   资讯子频道:
 
     | 中国财经 | 国际财经              | 新闻人物  | 财经视点 |
     | -------- | --------------------- | --------- | -------- |
     | china    | internationalbusiness | newsmaker | opinions |
 
-    -   专栏子频道:
+    *   专栏子频道:
 
     | 中国财经专栏 | 国际财经专栏 | 大宗商品专栏 |
     | ------------ | ------------ | ------------ |
     | CnColumn     | IntColumn    | ComColumn    |
 
--   美国分站 `us`：
+*   美国分站 `us`：
 
-    -   主频道:
+    *   主频道:
 
     | Business | Markets | World | Politics | Tech       | Breakingviews | Wealth | Life      |
     | -------- | ------- | ----- | -------- | ---------- | ------------- | ------ | --------- |
     | business | markets | world | politics | technology | breakingviews | wealth | lifestyle |
 
--   英国分站 `uk`：
+*   英国分站 `uk`：
 
-    -   主频道:
+    *   主频道:
 
     | Business | Markets | World | UK | Tech       | Money           | Breakingviews | Sport  | Life      |
     | -------- | ------- | ----- | -- | ---------- | --------------- | ------------- | ------ | --------- |
@@ -453,11 +512,21 @@ category 对应的关键词有
 
 ### 首页头条
 
-<Route author="HenryQW" example="/thepaper/featured" path="/thepaper/featured"/>
+<Route author="HenryQW nczitzk" example="/thepaper/featured" path="/thepaper/featured"/>
 
 ### 频道
 
-<Route author="xyqfer" example="/thepaper/channel/27224" path="/thepaper/channel/:id" :paramsDesc="['频道 id']"/>
+<Route author="xyqfer nczitzk" example="/thepaper/channel/27224" path="/thepaper/channel/:id" :paramsDesc="['频道 id，可在频道页 URL 中找到']">
+
+| 视频  | 时事  | 财经  | 思想  | 澎湃号 | 生活  |
+| ----- | ----- | ----- | ----- | ------ | ----- |
+| 26916 | 25950 | 25951 | 25952 | 36079  | 25953 |
+
+</Route>
+
+### 列表
+
+<Route author="nczitzk" example="/thepaper/list/25457" path="/thepaper/list/:id" :paramsDesc="['列表 id，可在列表页 URL 中找到']"/>
 
 ### 澎湃美数组作品集
 
@@ -468,7 +537,6 @@ category 对应的关键词有
 | 2    | 4    | 3      | 453      |
 
 </Route>
-
 ## 齐鲁晚报
 
 ### 新闻
@@ -513,9 +581,33 @@ category 对应的关键词有
 
 ### ホームページ
 
-<Route author="zjysdhr" example="/nikkei/index" path="/nikkei/index" radar="1">
+<Route author="zjysdhr" example="/nikkei/index" path="/nikkei/index" radar="1" rssbud="1">
 
 日文版首页
+
+</Route>
+
+### 新聞
+
+<Route author="Arracc" example="/nikkei/news" path="/nikkei/:category/:article_type?" :paramsDesc="['版块','文章类型，free仅无料全文，缺省为无料全文、有料非全文']">
+
+综合页文章标题添加板块标签
+
+| 総合 | マネーのまなび | 経済・金融 | 政治     | ビジネス | マネーのまなび | テクノロジー | 国際          | スポーツ | 社会・くらし | オピニオン | 文化    | FT     | 地域  | 日経ビジネス | ライフ |
+| ---- | -------------- | ---------- | -------- | -------- | -------------- | ------------ | ------------- | -------- | ------------ | ---------- | ------- | ------ | ----- | ------------ | ------ |
+| news | 未支持         | economy    | politics | business | 未支持         | technology   | international | sports   | society      | opinion    | culture | 未支持 | local | 未支持       | 未支持 |
+
+</Route>
+
+## 台湾中央通讯社
+
+### 分类
+
+<Route author="nczitzk" example="/cna/aall" path="/cna/:id?" :paramsDesc="['分类 id，见下表，默认为 aall']">
+
+| 即時 | 政治 | 國際 | 兩岸 | 產經 | 證券 | 科技 | 生活 | 社會 | 地方 | 文化 | 運動 | 娛樂 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| aall | aipl | aopl | acn  | aie  | asc  | ait  | ahel | asoc | aloc | acul | aspt | amov |
 
 </Route>
 
@@ -553,23 +645,23 @@ category 对应的关键词有
 
 ### 热门
 
-<Route author="hoilc" example="/hk01/hot" path="/hk01/hot" radar="1"/>
+<Route author="hoilc" example="/hk01/hot" path="/hk01/hot" radar="1" rssbud="1"/>
 
 ### 栏目
 
-<Route author="hoilc" example="/hk01/zone/11" path="/hk01/zone/:id" :paramsDesc="['栏目id, 可在URL中找到']" radar="1"/>
+<Route author="hoilc" example="/hk01/zone/11" path="/hk01/zone/:id" :paramsDesc="['栏目id, 可在URL中找到']" radar="1" rssbud="1"/>
 
 ### 子栏目
 
-<Route author="hoilc" example="/hk01/channel/391" path="/hk01/channel/:id" :paramsDesc="['子栏目id, 可在URL中找到']" radar="1"/>
+<Route author="hoilc" example="/hk01/channel/391" path="/hk01/channel/:id" :paramsDesc="['子栏目id, 可在URL中找到']" radar="1" rssbud="1"/>
 
 ### 专题
 
-<Route author="hoilc" example="/hk01/issue/649" path="/hk01/issue/:id" :paramsDesc="['专题id, 可在URL中找到']" radar="1"/>
+<Route author="hoilc" example="/hk01/issue/649" path="/hk01/issue/:id" :paramsDesc="['专题id, 可在URL中找到']" radar="1" rssbud="1"/>
 
 ### 标签
 
-<Route author="hoilc" example="/hk01/tag/2787" path="/hk01/tag/:id" :paramsDesc="['标签id, 可在URL中找到']" radar="1"/>
+<Route author="hoilc" example="/hk01/tag/2787" path="/hk01/tag/:id" :paramsDesc="['标签id, 可在URL中找到']" radar="1" rssbud="1"/>
 
 ## 香港電台
 
@@ -625,6 +717,20 @@ category 对应的关键词有
 
 </Route>
 
+### 新闻专题
+
+<Route author="nczitzk" example="/cctv-special/315" path="/cctv-special/:id?" :paramsDesc="['专题 id，可在对应专题页 URL 中找到，默认为 `315` 即 3·15晚会']">
+
+::: tip 提示
+
+如 [2020 年国家网络安全宣传周](https://news.cctv.com/special/2020gjwlaqxcz/index.shtml) 的专题页 URL 为 <https://news.cctv.com/special/2020gjwlaqxcz/index.shtml。其专题> id 即为 `2020gjwlaqxcz`。
+
+:::
+
+此处查看 [所有新闻专题](http://news.cctv.com/special/index.shtml)
+
+</Route>
+
 ### 专题
 
 <Route author="idealclover xyqfer" example="/cctv/world" path="/cctv/:category" :paramsDesc="['分类名']">
@@ -637,7 +743,7 @@ category 对应的关键词有
 
 ### 新闻联播文字版
 
-<Route author="luyuhuang" example="/xinwenlianbo/index" path="/xinwenlianbo/index" radar="1"/>
+<Route author="luyuhuang" example="/xinwenlianbo/index" path="/xinwenlianbo/index" radar="1" rssbud="1"/>
 
 ### 新闻联播文字版全文
 
@@ -713,11 +819,23 @@ category 对应的关键词有
 
 </Route>
 
+## 中山网
+
+### 中山网新闻
+
+<Route author="laampui" example="/zsnews/index/35" path="/zsnews/index/:cateid" :paramsDesc="['类别']">
+
+| 35   | 36   | 37   | 38   | 39   |
+| ---- | ---- | ---- | ---- | ---- |
+| 本地 | 镇区 | 热点 | 社会 | 综合 |
+
+</Route>
+
 ## 中時電子報
 
 ### 新聞
 
-<Route author="luyuhuang" example="/chinatimes/realtimenews" path="/chinatimes/:caty" :paramsDesc="['类别']" radar="1">
+<Route author="luyuhuang" example="/chinatimes/realtimenews" path="/chinatimes/:caty" :paramsDesc="['类别']" radar="1" rssbud="1">
 
 | realtimenews | politic | opinion | life | star | money | society | hottopic | tube    | world | armament | chinese | fashion | sports | technologynews | travel | album |
 | ------------ | ------- | ------- | ---- | ---- | ----- | ------- | -------- | ------- | ----- | -------- | ------- | ------- | ------ | -------------- | ------ | ----- |

@@ -1,8 +1,4 @@
----
-pageClass: routes
----
-
-# 博客
+***
 
 ## archdaily
 
@@ -14,7 +10,7 @@ pageClass: routes
 
 ### 文章更新
 
-<Route author="hoilc" example="/google/sites/outlierseconomics" path="/google/sites/:id" :paramsDesc="['Site ID, 可在 URL 中找到']" radar="1" />
+<Route author="hoilc" example="/google/sites/outlierseconomics" path="/google/sites/:id" :paramsDesc="['Site ID, 可在 URL 中找到']" radar="1" rssbud="1"/>
 
 ## Hedwig.pub
 
@@ -64,6 +60,10 @@ pageClass: routes
 
 <Route author="xyqfer" example="/leemeng" path="/leemeng"/>
 
+## pageClass: routes
+
+# 博客
+
 ## Paul Graham 博客
 
 通过提取文章全文，提供比官方源更佳的阅读体验。
@@ -102,7 +102,7 @@ pageClass: routes
 
 ### 文章
 
-<Route author="changlan" example="/blogs/jianning" path="/blogs/jianning" radar="1"/>
+<Route author="changlan" example="/blogs/jianning" path="/blogs/jianning" radar="1" rssbud="1"/>
 
 ## 敬维博客
 

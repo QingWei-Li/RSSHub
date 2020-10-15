@@ -1,8 +1,4 @@
----
-pageClass: routes
----
-
-# 阅读
+***
 
 ## All Poetry
 
@@ -15,6 +11,10 @@ pageClass: routes
 ### eBook Releases
 
 <Route author="nczitzk" example="/mobilism/release" path="/mobilism/release" />
+
+## pageClass: routes
+
+# 阅读
 
 ## UU 看书
 
@@ -58,7 +58,7 @@ pageClass: routes
 
 ### biquge5200.com
 
-<Route author="jjeejj" example="/novel/biquge/52_52542" path="/novel/biquge/:id" :paramsDesc="['小说 id, 可在对应小说页 URL 中找到']" anticrawler="1" radar="1"></Route>
+<Route author="jjeejj" example="/novel/biquge/52_52542" path="/novel/biquge/:id" :paramsDesc="['小说 id, 可在对应小说页 URL 中找到']" anticrawler="1" radar="1" rssbud="1"></Route>
 
 ::: tip 提示
 
@@ -68,7 +68,7 @@ pageClass: routes
 
 ### biquge.info
 
-<Route author="machsix" example="/novel/biqugeinfo/81_81797" path="/novel/biqugeinfo/:id" :paramsDesc="['小说 id, 可在对应小说页 URL 中找到']" anticrawler="1" radar="1"></Route>
+<Route author="machsix" example="/novel/biqugeinfo/81_81797" path="/novel/biqugeinfo/:id" :paramsDesc="['小说 id, 可在对应小说页 URL 中找到']" anticrawler="1" radar="1" rssbud="1"></Route>
 
 ::: tip 提示
 
@@ -268,7 +268,7 @@ count 的取值范围为 1-12，为防止请求次数过多，推荐设置为 5 
 
 ### 最新章节
 
-<Route author="suiyuran" example="/novel/zhaishuyuan/17858" path="/novel/zhaishuyuan/:id" :paramsDesc="['小说 id, 可在对应小说页 URL 中找到, 例如 `17858`']" radar="1">
+<Route author="suiyuran" example="/novel/zhaishuyuan/17858" path="/novel/zhaishuyuan/:id" :paramsDesc="['小说 id, 可在对应小说页 URL 中找到, 例如 `17858`']" radar="1" rssbud="1">
 
 举例网址：<https://www.zhaishuyuan.com/book/17858>
 

@@ -1,8 +1,4 @@
----
-pageClass: routes
----
-
-# 其他
+***
 
 ## acwifi 路由器交流
 
@@ -101,7 +97,7 @@ pageClass: routes
 
 ### HackerOne Hacker Activity
 
-<Route author="imlonghao" example="/hackerone/hacktivity" path="/hackerone/hacktivity" radar="1"/>
+<Route author="imlonghao" example="/hackerone/hacktivity" path="/hackerone/hacktivity" radar="1" rssbud="1"/>
 
 ## Instapaper
 
@@ -157,6 +153,10 @@ pageClass: routes
 
 <Route author="fengkx" example="/one" path="/one"/>
 
+## pageClass: routes
+
+# 其他
+
 ## Parcel Tracking
 
 ### Hermes UK
@@ -208,10 +208,10 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 
 ### 最近更新
 
-<Route author="LogicJake" example="/wegene/newest" path="/wegene/newest" radar="1"/>
+<Route author="LogicJake" example="/wegene/newest" path="/wegene/newest" radar="1" rssbud="1"/>
 ### 栏目
 
-<Route author="LogicJake" example="/wegene/column/all/all" path="/wegene/column/:type/:category" :paramsDesc="['栏目类型，all（全部项目） 或 weapp（专业版）','栏目分类']" radar="1">
+<Route author="LogicJake" example="/wegene/column/all/all" path="/wegene/column/:type/:category" :paramsDesc="['栏目类型，all（全部项目） 或 weapp（专业版）','栏目分类']" radar="1" rssbud="1">
 
 :::
 type 为 all 时，category 参数不支持 cost 和 free
@@ -330,7 +330,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 通知
 
-<Route author="Derekmini markmingjie" example="/csc/notice/lxtz" path="/csc/notice/:type?" :paramsDesc="['分类, 默认为 `lxtz`']" radar="1">
+<Route author="Derekmini markmingjie" example="/csc/notice/lxtz" path="/csc/notice/:type?" :paramsDesc="['分类, 默认为 `lxtz`']" radar="1" rssbud="1">
 
 | 遴选通知 | 综合项目专栏 | 常见问题解答 | 录取公告 | 新闻资讯 | 新闻公告 |
 | -------- | ------------ | ------------ | -------- | -------- | -------- |
@@ -342,7 +342,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 新闻通知
 
-<Route author="Derekmini" example="/nsfc/news/jjyw" path="/nsfc/news/:type?" :paramsDesc="['分类, 默认为 `jjyw`']" radar="1">
+<Route author="Derekmini" example="/nsfc/news/jjyw" path="/nsfc/news/:type?" :paramsDesc="['分类, 默认为 `jjyw`']" radar="1" rssbud="1">
 
 | 基金要闻 | 通知公告 | 资助成果 | 科普快讯 |
 | -------- | -------- | -------- | -------- |
@@ -378,7 +378,21 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 实时 AQI
 
-<Route author="xapool" example="/aqicn/beijing" path="/aqicn/:city" :paramsDesc="['城市拼音或地区 ID，详见[aqicn.org](http://aqicn.org/city/)']"/>
+<Route author="xapool" example="/aqicn/beijing/pm25,pm10" path="/aqicn/:city/:pollution?" :paramsDesc="['城市拼音或地区 ID，详见[aqicn.org](http://aqicn.org/city/)', '可选择显示更详细的空气污染成分']"/>
+
+| 参数 | 污染成分 |
+| ---- | -------- |
+| pm25 | PM2.5    |
+| pm10 | PM10     |
+| o3   | O3       |
+| no2  | NO2      |
+| so2  | SO2      |
+| co   | CO       |
+
+举例: [https://rsshub.app/aqicn/beijing/pm25,pm10](https://rsshub.app/aqicn/beijing/pm25.pm10)
+
+1.  显示单个污染成分，例如「pm25」, <https://rsshub.app/aqicn/beijing/pm25>
+2.  逗号分隔显示多个污染成分，例如「pm25,pm10」，[https://rsshub.app/aqicn/beijing/pm25,pm10](https://rsshub.app/aqicn/beijing/pm25.pm10)
 
 ## 酷安
 
@@ -433,7 +447,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 支持的快递公司列表
 
-<Route author="NeverBehave" example="/kuaidi100/company" path="/kuaidi100/company" radar="1"/>
+<Route author="NeverBehave" example="/kuaidi100/company" path="/kuaidi100/company" radar="1" rssbud="1"/>
 
 ## 裏垢女子まとめ
 
@@ -521,6 +535,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="cc798461" example="/moxingnet" path="/moxingnet"/>
 
+## 诺贝尔奖
+
+### 获奖名单
+
+<Route author="nczitzk" example="/nobelprize" path="/nobelprize/:caty" :paramsDesc="['类别，见下表，默认为全部']">
+
+| 物理学  | 化学      | 生理学或医学           | 文学       | 和平  | 经济学            |
+| ------- | --------- | ---------------------- | ---------- | ----- | ----------------- |
+| physics | chemistry | physiology-or-medicine | literature | peace | economic-sciences |
+
+</Route>
+
 ## 且听风吟福利
 
 ### 分类
@@ -557,7 +583,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 郵便追跡サービス
 
-<Route author="tuzi3040" example="/japanpost/EJ123456789JP/ja" path="/japanpost/:reqCode/:locale?" :paramsDesc="['运单号', '语言，默认为`ja`']" radar="1">
+<Route author="tuzi3040" example="/japanpost/EJ123456789JP/ja" path="/japanpost/:reqCode/:locale?" :paramsDesc="['运单号', '语言，默认为`ja`']" radar="1" rssbud="1">
 
 | 日语 | 英语 |
 | ---- | ---- |
@@ -598,6 +624,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 最新规则
 
 <Route author="nczitzk" example="/szse/rule" path="/szse/rule"/>
+
+## 守望先锋
+
+### 补丁说明
+
+<Route author="nczitzk" example="/ow/patch" path="/ow/patch"/>
 
 ## 四川省科学技术厅
 
@@ -742,7 +774,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 远程 work 招聘信息
 
-<Route author="luyuhuang" example="/remote-work/all" path="/remote-work/:caty?" :paramsDesc="['职位类型, 默认为全部职位']" radar="1">
+<Route author="luyuhuang" example="/remote-work/all" path="/remote-work/:caty?" :paramsDesc="['职位类型, 默认为全部职位']" radar="1" rssbud="1">
 
 | 所有职位 |     技术    |  设计  |    运营   |   产品  |  其他 |    市场   |  销售 |
 | :------: | :---------: | :----: | :-------: | :-----: | :---: | :-------: | :---: |
@@ -774,6 +806,29 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="SunShinenny" example="/zhilian/台州/JavaScript" path="/zhilian/:city/:keyword" :paramsDesc="['城市「如若无该城市数据，将会报错」','搜索关键词']"/>
 
+## 中国工程科技知识中心
+
+### 知识应用
+
+<Route author="nczitzk" example="/cktest/app" path="/cktest/app/:ctgroup?/:domain?" :paramsDesc="['所属类别，见下表，默认为全部类别', '领域，见下表，默认为全部列表']">
+
+所属类别
+
+| 专题知识服务 | 知识分析 | 知识工具 | 综合性知识服务 | 全部类别 |
+| ------------ | -------- | -------- | -------------- | -------- |
+| 2            | 3        | 4        | 1              | 0        |
+
+领域
+
+| 综合 | 农业 | 航天 | 地质 | 信息技术 | 林业 | 医药卫生 | 战略性新兴产业 | 能源 | 冶金 | 化工 | 地理信息 | 营养健康 | 工程科教图书 | 交通 | 创新设计 | 地理资源与生态 | 材料 | 气象 | 渔业 | 环境工程 | 试验技术 | 中草药 | 水利 | 海洋工程 |
+| ---- | ---- | ---- | ---- | -------- | ---- | -------- | -------------- | ---- | ---- | ---- | -------- | -------- | ------------ | ---- | -------- | -------------- | ---- | ---- | ---- | -------- | -------- | ------ | ---- | -------- |
+
+</Route>
+
+### 产业政策
+
+<Route author="nczitzk" example="/cktest/policy" path="/cktest/policy"/>
+
 ## 中国银行
 
 ### 中国银行外汇牌价
@@ -790,7 +845,7 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 新闻
 
-<Route author="luyuhuang" example="/ems/news" path="/ems/news" radar="1"/>
+<Route author="luyuhuang" example="/ems/news" path="/ems/news" radar="1" rssbud="1"/>
 
 ## 自如
 

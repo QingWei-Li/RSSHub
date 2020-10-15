@@ -1,8 +1,4 @@
----
-pageClass: routes
----
-
-# 购物
+***
 
 ## Alter 中国
 
@@ -67,6 +63,22 @@ Transform any search into a feed.
 For instance, in <https://www.leboncoin.fr/recherche/?**category=10&locations=Paris_75015>, the query is `category=10&locations=Paris_75015`
 
 </Route>
+
+## Mercari
+
+### 商品
+
+<Route author="nczitzk" example="/mercari/category/1" path="/mercari/:type/:id" :paramsDesc="['类型，可选 `category` 指按类别浏览，`brand` 指按品牌浏览，`search` 指搜索关键词浏览', 'id，可在对应分类或品牌页 URL 中找到。若选择 `search` 作为 `type` 则此处填写关键词']">
+
+所有分类参见 [分类清单](https://www.mercari.com/jp/category/)
+
+所有品牌参见 [品牌清单](https://www.mercari.com/jp/brand/)
+
+</Route>
+
+## pageClass: routes
+
+# 购物
 
 ## Westore
 
@@ -167,19 +179,19 @@ For instance, in <https://www.leboncoin.fr/recherche/?**category=10&locations=Pa
 
 ### 关键词
 
-<Route author="DIYgod" example="/smzdm/keyword/女装" path="/smzdm/keyword/:keyword" :paramsDesc="['你想订阅的关键词']" radar="1"/>
+<Route author="DIYgod" example="/smzdm/keyword/女装" path="/smzdm/keyword/:keyword" :paramsDesc="['你想订阅的关键词']" radar="1" rssbud="1"/>
 
 ### 排行榜
 
-<Route author="DIYgod" example="/smzdm/ranking/pinlei/11/3" path="/smzdm/ranking/:rank_type/:rank_id/:hour" :paramsDesc="['榜单类型','榜单ID','时间跨度']" radar="1">
+<Route author="DIYgod" example="/smzdm/ranking/pinlei/11/3" path="/smzdm/ranking/:rank_type/:rank_id/:hour" :paramsDesc="['榜单类型','榜单ID','时间跨度']" radar="1" rssbud="1">
 
--   榜单类型
+*   榜单类型
 
 | 好价品类榜 | 好价电商榜 | 海淘 TOP 榜 | 好文排行榜 | 好物排行榜 |
 | ---------- | ---------- | ----------- | ---------- | ---------- |
 | pinlei     | dianshang  | haitao      | haowen     | haowu      |
 
--   榜单 ID
+*   榜单 ID
 
 好价品类榜
 
